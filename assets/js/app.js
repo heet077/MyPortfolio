@@ -4,6 +4,7 @@ let ctaLinks = document.querySelectorAll(
   ".about-content a, .footer-links a, .more-about a"
 );
 let projectLinks = document.querySelectorAll(".project-box__link a ion-icon");
+let resumeDownloadLinks = document.querySelectorAll(".resume-download, .header-resume-btn");
 console.log(projectLinks);
 
 //  Mouse effect
@@ -29,6 +30,59 @@ projectLinks.forEach((link) => {
   });
   link.addEventListener("mouseleave", () => {
     mouseCursor.classList.remove("link-grow");
+  });
+});
+
+// Resume download functionality
+resumeDownloadLinks.forEach((link) => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    
+    // Add download animation
+    this.style.transform = "scale(0.95)";
+    setTimeout(() => {
+      this.style.transform = "";
+    }, 150);
+    
+    // Try to download PDF first, fallback to HTML
+    const pdfUrl = "./assets/resume/Resume_Heet Jivani.pdf";
+    const htmlUrl = "./assets/resume/Heet_Jivani_Resume.html";
+    
+    // Create a temporary link to trigger download
+    const downloadLink = document.createElement('a');
+    downloadLink.href = pdfUrl;
+    downloadLink.download = "Resume_Heet Jivani.pdf";
+    
+    // Add error handling for PDF download
+    downloadLink.onerror = function() {
+      console.log("PDF download failed, opening HTML version");
+      window.open(htmlUrl, '_blank');
+    };
+    
+    // Add success handling
+    downloadLink.onload = function() {
+      console.log("Resume download successful");
+    };
+    
+    // Trigger download
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+    
+    // Optional: Track download (you can add analytics here)
+    console.log("Resume download initiated");
+  });
+  
+  // Add mouse effects for resume links
+  link.addEventListener("mouseover", () => {
+    if (mouseCursor) {
+      mouseCursor.classList.add("link-grow");
+    }
+  });
+  link.addEventListener("mouseleave", () => {
+    if (mouseCursor) {
+      mouseCursor.classList.remove("link-grow");
+    }
   });
 });
 

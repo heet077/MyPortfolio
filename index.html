@@ -8,6 +8,90 @@
     <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
     <link rel="stylesheet" href="https://use.typekit.net/kse0maf.css" />
 
+    <!-- Header Resume Button Styles -->
+    <style>
+      .header-resume-download {
+        position: fixed;
+        top: 2rem;
+        right: 10rem;
+        z-index: 101;
+      }
+      
+      .header-resume-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 16px;
+        background-color: rgba(0, 0, 0, 0.75);
+        border: 1px solid #34a3a3;
+        border-radius: 20px;
+        color: #34a3a3;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+      
+      .header-resume-btn ion-icon {
+        font-size: 1.1em;
+      }
+      
+      .header-resume-btn:hover {
+        background-color: #34a3a3;
+        color: #000;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(52, 163, 163, 0.3);
+      }
+      
+      .header-resume-btn:active {
+        transform: translateY(0);
+      }
+      
+      /* Light theme styles */
+      html[data-theme="light"] .header-resume-btn {
+        background-color: rgba(255, 255, 255, 0.75);
+        color: #39a2db;
+        border-color: #39a2db;
+      }
+      
+      html[data-theme="light"] .header-resume-btn:hover {
+        background-color: #39a2db;
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(57, 162, 219, 0.3);
+      }
+      
+      /* Responsive styles */
+      @media screen and (max-width: 900px) {
+        .header-resume-download {
+          top: 0.5rem;
+          right: 8rem;
+        }
+        
+        .header-resume-btn {
+          padding: 6px 12px;
+          font-size: 0.8rem;
+        }
+      }
+      
+      @media screen and (max-width: 600px) {
+        .header-resume-download {
+          top: 0.3rem;
+          right: 6rem;
+        }
+        
+        .header-resume-btn {
+          padding: 4px 8px;
+          font-size: 0.7rem;
+          gap: 4px;
+        }
+        
+        .header-resume-btn ion-icon {
+          font-size: 1em;
+        }
+      }
+    </style>
+
     <!-- Primary Meta Tags -->
     <title>Heet Jivani | Mobile App Developer</title>
     <meta
@@ -146,6 +230,13 @@
           >
         </div>
 
+        <div class="header-resume-download">
+          <a href="./assets/resume/Resume_Heet Jivani.pdf" download class="header-resume-btn">
+            <ion-icon name="document-text-outline"></ion-icon>
+            Resume
+          </a>
+        </div>
+
         <div class="landing-text">
           <h1>Heet Jivani</h1>
           <p>My approach to software engineering is simple:
@@ -185,7 +276,10 @@
               <div class="about-cta">
                 <a href="#contact" class="skills-cta">Hire me</a>
                 <span>—</span>
-                <a href="./about/" class="exp-cta">More about me</a>
+                <a href="./assets/resume/Resume_Heet Jivani.pdf" download class="exp-cta resume-download">
+                  <ion-icon name="download-outline"></ion-icon>
+                  Download Resume
+                </a>
               </div>
             </div>
           </div>

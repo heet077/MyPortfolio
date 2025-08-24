@@ -2,6 +2,18 @@
   .about {
     padding: 2rem 2rem !important;
   }
+  
+  header {
+    .header-resume-download {
+      top: 0.5rem;
+      right: 8rem;
+      
+      .header-resume-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -81,6 +93,24 @@
     width: 1.5rem;
     height: 1rem;
   }
+  
+  header {
+    .header-resume-download {
+      top: 0.3rem;
+      right: 6rem;
+      
+      .header-resume-btn {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+        gap: 4px;
+        
+        ion-icon {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+  
   .about {
     margin-top: 9rem !important;
     .container {
@@ -88,6 +118,14 @@
       .profile-img {
         margin: 0 2rem 4rem 1rem;
       }
+    }
+  }
+  
+  .about-cta {
+    .resume-download {
+      padding: 6px 12px;
+      font-size: 0.85em;
+      gap: 6px;
     }
   }
   .logo {

@@ -30,6 +30,44 @@ header {
       padding: 0 1rem;
     }
   }
+  
+  .header-resume-download {
+    position: fixed;
+    top: 1rem;
+    right: 12rem;
+    z-index: 101;
+    
+    .header-resume-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background-color: rgba(var(--bg), 0.75);
+      border: 1px solid var(--mainColor);
+      border-radius: 20px;
+      color: var(--mainColor);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      
+      ion-icon {
+        font-size: 1.1em;
+      }
+      
+      &:hover {
+        background-color: var(--mainColor);
+        color: var(--bg);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(52, 163, 163, 0.3);
+      }
+      
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
 }
 .logo img {
   position: fixed;

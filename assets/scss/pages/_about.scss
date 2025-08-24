@@ -80,4 +80,39 @@
     color: var(--pink);
     margin-left: 10px;
   }
+  
+  .resume-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 2px solid var(--pink);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    
+    ion-icon {
+      font-size: 1.1em;
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover {
+      background-color: var(--pink);
+      color: var(--bg) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(251, 131, 158, 0.3);
+      
+      ion-icon {
+        transform: translateY(-1px);
+      }
+      
+      &::before {
+        width: 0% !important;
+      }
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
 }
