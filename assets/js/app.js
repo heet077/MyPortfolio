@@ -45,7 +45,7 @@ resumeDownloadLinks.forEach((link) => {
     }, 150);
     
     // Try to download PDF first, fallback to HTML
-    const pdfUrl = "./assets/resume/Resume_Heet Jivani.pdf";
+    const pdfUrl = "./assets/resume/Flutter_Resume.pdf";
     const htmlUrl = "./assets/resume/Heet_Jivani_Resume.html";
     
     // Create a temporary link to trigger download
