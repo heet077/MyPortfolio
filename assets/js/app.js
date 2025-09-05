@@ -51,7 +51,7 @@ resumeDownloadLinks.forEach((link) => {
     // Create a temporary link to trigger download
     const downloadLink = document.createElement('a');
     downloadLink.href = pdfUrl;
-    downloadLink.download = "Resume_Heet Jivani.pdf";
+    downloadLink.download = "Flutter_Resume.pdf";
     
     // Add error handling for PDF download
     downloadLink.onerror = function() {
